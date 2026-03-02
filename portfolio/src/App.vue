@@ -18,7 +18,6 @@ import Footer from './components/Essentials/Footer/footer.vue'
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; 
 }
 
 main {
@@ -26,6 +25,5 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 </style>
