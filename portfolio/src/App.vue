@@ -6,24 +6,32 @@ import Footer from './components/Essentials/Footer/footer.vue'
 <template>
   <div class="layout">
     <Header />
-    <main>
+
+    <main class="main-content">
       <router-view />
     </main>
+
     <Footer />
   </div>
 </template>
 
 <style>
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-main {
+.main-content {
   flex: 1;
+
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 </style>

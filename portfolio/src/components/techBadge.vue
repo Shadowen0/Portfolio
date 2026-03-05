@@ -17,6 +17,8 @@ const props = defineProps({
     border-radius: 20px;
     font-size: 0.8rem;
     background: rgba(255,255,255,0.1);
+
+    color: white;
 }
 
 .Vue {
@@ -24,13 +26,25 @@ const props = defineProps({
     color: white;
 }
 
-.JavaScript {
-    background-color: #f7df1e;
-    color: black;
+.Optimisation {
+    background-color: red;
 }
 
 .Node {
     background-color: #68a063;
-    color: white;
 }
+
+.Git {
+    background-color: gray;
+}
+
+.Python {
+    background-color: yellow;
+    color: black;
+}
+
+.Collaboration {
+    background-color: purple;
+}
+
 </style>

@@ -43,7 +43,12 @@ function closeLightbox() {
         />
       </div>
 
-      <a :href="link" target="_blank" class="project-link">
+      <a 
+        v-if="link && link !== '#'"
+        :href="link"
+        target="_blank"
+        class="project-link"
+      >
         Voir le projet →
       </a>
     </div>

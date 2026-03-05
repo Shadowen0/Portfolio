@@ -2,15 +2,27 @@
 const articles = [
   {
     title: "Développement",
-    content: "je suis un texte aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-  },
-  {
-    title: "Créativité",
-    content: "je suis un texte aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    content: `
+Assurer un développement durable dans le temps est le principe le plus important de l’informatique pour moi. Je trouve le travail d’optimisation et de miniaturisation des processus particulièrement intéressant et épanouissant.
+
+Trouver un travail me confrontant constamment à des problèmes de logique complexes, nécessitant une réflexion approfondie, serait pour moi un véritable rêve.
+`
   },
   {
     title: "Vision",
-    content: "je suis un texte aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    content: `
+Dans un monde en constant mouvement, il est essentiel d’être résilient et de continuer à s’adapter, quelle que soit la situation.
+
+L’un des enjeux existentiels actuels en informatique est celui de l’intelligence artificielle. Trouver un équilibre entre le travail humain et le travail automatisé par l’IA est désormais extrêmement important. L’IA est un outil très puissant, mais elle ne pourra jamais remplacer la créativité, l’analyse et la sensibilité humaines.
+`
+  },
+  {
+    title: "Loisirs",
+    content: `
+Je m’épanouis particulièrement dans les domaines créatifs, notamment le dessin et la création de jeux vidéo.
+
+Ma volonté est de procurer de la joie aux autres grâce à mes créations.
+`
   }
 ]
 </script>
@@ -27,15 +39,45 @@ const articles = [
       <div class="hero-right">
         <div class="hero-text">
           <h1>Léothen Dusannier</h1>
-          <h3>Développeur Web • Étudiant en BUT 3</h3>
+          <h3>Développeur • Étudiant en BUT 3</h3>
           <p>
-            JE SUIS UNE DESCRIPTION DESCRIPTIVE SALUTT
+            Je suis passionné par l’informatique depuis mon plus jeune âge. 
+            Je me suis orienté vers ce domaine au lycée grâce à la spécialité NSI, 
+            où j’ai commencé à apprendre les bases du développement.
+
+            <br /><br />
+
+            C’est durant mes études supérieures, en BUT, que j’ai pu explorer plus en profondeur 
+            les possibilités offertes par l’informatique. J’y ai appris des concepts plus complexes 
+            et découvert ma passion pour le front-end et le design.
+
+            <br /><br />
+
+            Je suis particulièrement intéressé par la conception d’applications.
           </p>
         </div>
 
+        <div class="footer-center">
+        <a 
+          href="https://www.linkedin.com/in/léothen-dusannier-9aa950339/"
+          target="_blank"
+          class="social-link"
+        >
+          LinkedIn
+        </a>
+
+        <a 
+          href="https://github.com/Shadowen0"
+          target="_blank"
+          class="social-link"
+        >
+          GitHub
+        </a>
+      </div>
+
         <div class="hero-buttons">
           <router-link to="/experiences" class="primary-btn">Voir mes projets</router-link>
-          <router-link to="/" class="secondary-btn">Me contacter</router-link>
+          <router-link to="/formulaireContact" class="secondary-btn">Me contacter</router-link>
         </div>
       </div>
 
@@ -61,13 +103,12 @@ const articles = [
     </section>
 
     <section class="youtube-section">
-      <h2>Mon BUT en je sais pas combien de temps</h2>
+      <h2>Mon BUT en 180 secondes</h2>
 
       <div class="video-container">
         <iframe
-          src="https://www.youtube.com/watch?v=IoVB5Hn2m_k&t=1175s"
+          src="https://www.youtube.com/embed/IoVB5Hn2m_k"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
@@ -79,6 +120,38 @@ const articles = [
 </template>
 
 <style>
+.footer-center {
+  display: flex;
+  gap: 30px;
+}
+
+.social-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.social-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  transition: 0.3s ease;
+}
+
+.social-link:hover::after {
+  width: 100%;
+}
+
+.social-link:hover {
+  color: #a777e3;
+}
+
 .home-page {
   display: flex;
   flex-direction: column;
@@ -232,9 +305,8 @@ const articles = [
   opacity: 0.85;
   text-align: left;
 
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-word;
+
+  white-space: pre-line;
 }
 
 .youtube-section {
